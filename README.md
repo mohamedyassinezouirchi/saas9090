@@ -51,3 +51,4 @@ The application uses the Node.js standard library and built-in SQLite, avoiding 
 
 Set the required variables in `.env.example`, use an HTTPS reverse proxy, mount `data/` on encrypted persistent storage, back up the database, and run behind a process manager. Do not use the development session secret in production. Configure Lemon Squeezy to post subscription events to `/api/webhooks/lemonsqueezy` and set `LEMONSQUEEZY_WEBHOOK_SECRET`. Add a Gemini API key to enable grounded Lane responses.
 "# saas9090" 
+"# saas9090" 
