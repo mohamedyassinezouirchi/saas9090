@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ledgerlane is the AI assurance operating system for finance teams." />
+    <title>Ledgerlane — AI assurance for finance operations</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./redesign.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#top" aria-label="Ledgerlane home"><span class="brand-mark">L</span><span>ledgerlane</span></a>
+        <div class="workspace"><span class="avatar">AH</span><span id="organizationName">Atlas Holdings</span><span class="chevron">⌄</span></div>
+        <nav aria-label="Main navigation">
+          <a class="nav-link active" href="#overview"><span>◈</span>Overview</a>
+          <a class="nav-link" href="#workflows"><span>⌁</span>Workflows <b id="workflowCount">3</b></a>
+          <a class="nav-link" href="#evidence"><span>▣</span>Evidence</a>
+          <a class="nav-link" href="#controls"><span>◌</span>Controls</a>
+          <a class="nav-link" href="#insights"><span>⌘</span>Insights</a>
+          <p class="nav-label">MANAGE</p>
+          <a class="nav-link" href="#team"><span>♧</span>Team</a>
+          <a class="nav-link" href="#settings"><span>⚙</span>Settings</a>
+        </nav>
+        <div class="sidebar-bottom"><div class="upgrade"><span class="spark">✦</span><strong>Scale with certainty</strong><small>Unlock controls, SSO and custom retention.</small><button id="viewPlan">View plan</button></div><a class="profile" href="#settings"><span class="avatar dark" id="profileInitials">LM</span><span><strong id="profileName">Leila Morgan</strong><small id="profileRole">Controller</small></span><span>•••</span></a></div>
+      </aside>
+
+      <main id="top">
+        <header class="topbar"><button class="mobile-menu" aria-label="Open menu">☰</button><div class="breadcrumb">Workspace <span>/</span> Finance OS</div><div class="top-actions"><button class="icon-btn" aria-label="Search">⌕</button><button class="icon-btn notification" aria-label="Notifications">♢<i></i></button><button class="new-btn" id="newWorkflow">+ New workflow</button></div></header>
+        <section class="page-head" id="overview"><div><p class="eyebrow">TUESDAY, OCTOBER 22</p><h1 id="greeting">Good morning, Leila.</h1><p class="subhead">Your close is moving. Here’s what needs your attention.</p></div><div class="close-status"><span class="status-dot"></span><div><small>OCTOBER CLOSE</small><strong id="closeProgress">72% complete</strong></div><button>View close →</button></div></section>
+        <section class="metric-grid" aria-label="Close metrics">
+          <article class="metric-card"><div class="metric-title">Close health <span class="trend up">↑ 8%</span></div><div class="metric-value" id="closeHealth">94<span>/100</span></div><div class="healthbar"><i id="healthBar"></i></div><p>On track for Oct 28 target</p></article>
+          <article class="metric-card"><div class="metric-title">Automated this close <span class="bot">✦</span></div><div class="metric-value" id="automatedHours">186<span> hrs</span></div><p class="positive">↑ 31 hours from last month</p><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+          <article class="metric-card"><div class="metric-title">Open exceptions <span class="count" id="exceptionCount">12</span></div><div class="metric-value" id="exceptionAmount">$48.2<span>k</span></div><p>Across 4 materiality thresholds</p><a href="#evidence">Review exceptions →</a></article>
+          <article class="metric-card"><div class="metric-title">Evidence coverage <span class="good">✓</span></div><div class="metric-value" id="evidenceCoverage">98.6<span>%</span></div><p>2 items need a source document</p><a href="#evidence">Inspect evidence →</a></article>
+        </section>
+
+        <section class="workspace-grid">
+          <article class="panel attention" id="workflows"><div class="panel-head"><div><p class="eyebrow coral">REQUIRES ATTENTION</p><h2 id="attentionTitle">3 items are blocking your close</h2></div><button class="text-button">See all <span>→</span></button></div><div class="attention-list" id="attentionList"></div></article>
+          <article class="panel ai-brief" id="insights"><div class="panel-head"><div><p class="eyebrow purple">✦ LANE INTELLIGENCE</p><h2>This month, in context</h2></div><button class="dots">•••</button></div><div class="brief-copy"><p><strong>Expense spend normalized</strong> after the Q3 offsite. The only unusual movement is in EMEA SaaS, driven by a new annual contract.</p><p>Based on your close history, you’re <strong>likely to finish 1.4 days early.</strong></p></div><button class="ask" id="askLane"><span>✦</span> Ask Lane about this close <b>⌘ K</b></button></article>
+        </section>
+        <section class="panel activity" id="evidence"><div class="panel-head"><div><h2>Close activity</h2><p>Every decision, source, and approval—captured automatically.</p></div><button class="text-button">Open audit trail <span>→</span></button></div><div class="activity-list" id="activityList"></div></section>
+      </main>
+    </div>
+    <dialog id="workflowDialog"><form method="dialog"><button class="dialog-close" value="cancel">×</button><p class="eyebrow purple">NEW AUTOMATION</p><h2>Start a reliable workflow</h2><p>Choose a proven control playbook. Lane will connect the evidence, route approvals, and keep an audit trail.</p><div class="playbooks"><button value="reconciliation">◌ <span><strong>Reconcile an account</strong><small>Match transactions and explain exceptions</small></span>→</button><button value="accrual">✦ <span><strong>Prepare an accrual</strong><small>Draft a supported journal entry</small></span>→</button><button value="evidence">▣ <span><strong>Collect control evidence</strong><small>Request, validate and package proof</small></span>→</button></div></form></dialog>
+    <dialog id="laneDialog"><form id="laneForm"><button class="dialog-close" type="button" value="cancel">×</button><p class="eyebrow purple">✦ LANE INTELLIGENCE</p><h2>What would you like to understand?</h2><div class="chat-prompt"><span>✦</span><input id="laneQuestion" autofocus required maxlength="500" placeholder="Ask about the October close…" /><button type="submit">Send</button></div><div class="prompt-chips"><button type="button" value="chip">Why did SaaS move?</button><button type="button" value="chip">Summarize open risks</button></div><p id="laneResponse" role="status" aria-live="polite"></p></form></dialog>
+    <dialog id="billingDialog"><form method="dialog"><button class="dialog-close" type="button" value="cancel">×</button><p class="eyebrow purple">BILLING</p><h2>Choose your operating scale.</h2><p>Secure subscription checkout is handled by Lemon Squeezy.</p><div class="playbooks"><button class="billing-plan" type="button" data-plan="growth">✦ <span><strong>Growth — $499/month</strong><small>Lane intelligence and advanced controls</small></span>→</button><button class="billing-plan" type="button" data-plan="scale">◌ <span><strong>Scale — $1,499/month</strong><small>SSO, custom retention and priority support</small></span>→</button></div></form></dialog>
+    <div class="toast" role="status"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>

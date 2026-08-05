@@ -1,0 +1,17 @@
+{
+  "name": "ledgerlane",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AI assurance operating system for finance teams",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test tests/*.test.js",
+    "build": "node --check server.js && node --check app.js && node --check landing.js",
+    "lint": "node --check server.js && node --check app.js && node --check landing.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}
